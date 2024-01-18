@@ -4,103 +4,83 @@
     box-sizing: border-box;
 }
 
-body,html {
-    width: 100%;
+body, html{
+    width: 100vw;
     height: 100vh;
-    background-color: rgb(31, 74, 99);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: linear-gradient(72deg, #3DEBB0 1%, #8946F3 99%);
 }
 
-.slider{
-    margin: 0 auto;
-    width: 800px;
-    height: 400px;
-    overflow: hidden;
-}
-
-.slides{
-    width: 400%;
-    height: 400px;
-    display: flex;
-}
-
-.slides input{
+input{
     display: none;
 }
 
-.slide {
-    width: 25%;
-    position: relative;
+.content {
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 935px;
+    height: 520px;
+
+    border-radius: 20px;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.slide{
+    width: 20%;
+    transition: .5s;
 }
 
 .slide img{
-    width: 800px;
+    width: 100%;
+    height: 100%;
 }
 
-.manual-navigation {
+#slide1:checked ~ .s1{
+    margin-left: 0px;
+}
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+#slide5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+.navigation {
     position: absolute;
-    width: 800px;
-    margin-top: -30px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
 }
 
-.manual-btn{
-    border: 2px solid #ffffff;
-    padding: 5px;
-    border-radius: 10px;
+.bar {
+    width: 70px;
+    height: 17px;
+    border: 2px solid white;
+    border-radius: 5px;
     cursor: pointer;
+
+    transition: background-color .3s;
 }
-.manual-btn:not(:last-child){
+
+.bar:not(:last-child){
     margin-right: 40px;
 }
-.manual-btn:hover{
+
+.bar:hover{
     background-color: white;
     transition: .3s;
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-#radio2:checked ~ .first{
-    margin-left: -25%;
-}
-#radio3:checked ~ .first{
-    margin-left: -50%;
-}
-#radio4:checked ~ .first{
-    margin-left: -75%;
-}
-
-.navigation-auto div{
-    border: 2px solid blue;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.navigation-auto{
-    position: absolute;
-    width: 800px;
-    margin-top: 370px;
-    display: flex;
-    justify-content: center;
-}
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: white;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: white;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: white;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: white;
 }
