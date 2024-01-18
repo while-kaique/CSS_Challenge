@@ -1,9 +1,11 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
+    font-family: 'Lato';
 }
 
 body, html {
@@ -11,16 +13,187 @@ body, html {
     height: 100vh;
 }
 
+@keyframes subirtexto1 {
+    0% {
+        opacity: 0;
+        margin-top: 10%;
+    }
+    25% {
+        opacity: 1;
+        margin-top: 0%
+    }
+    50% {
+        
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0%
+    }
+}
+@keyframes subirtexto2 {
+    0% {
+        opacity: 0;
+        margin-top: 10%;
+    }
+    25% {
+        opacity: 0;
+        margin-top: 10%;
+    }
+    50% {
+        opacity: 1;
+        margin-top: 0%
+    }
+    100% {
+    }
+}
+@keyframes subirbtn {
+    0% {
+        opacity: 0;
+        margin-top: 10%;
+    }
+    25% {
+    }
+    50% {
+        opacity: 0;
+        margin-top: 10%;
+    }
+    75%{
+        opacity: 1;
+        margin-top: 0%
+    }
+    100% {
+    }
+}
+@keyframes subirimg {
+    0% {
+        opacity: 0;
+        margin-top: 10%;
+    }
+    25% {
+    }
+    50% {
+    }
+    75% {
+        opacity: 0;
+        margin-top: 10%;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0%;
+    }
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+
+    background: url('../imagens/desafio5/back-image.png') no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+/* NAVBAR */
 nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
     justify-items: center;
 }
-
-nav div{
-    border: 1px solid black;
+/* IMAGE IMG */
+nav .image{
+    padding: 25px;
+    justify-content: center;
 }
+nav .image img{
+    cursor: pointer;
+    height: 40px;
+}
+
+/* NAVBAR NAV */
 nav .nav {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
+    align-self: center;
+
 }
+nav .nav h2{
+    font-weight: 100;
+    font-size: 1.1em;
+    color: rgb(68, 68, 68);
+}
+nav .nav h2:hover, nav .login h2:hover{
+    cursor: pointer;
+    color: rgb(148, 148, 148);
+}
+
+/* LOGIN BUTTON */
+nav .login{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+nav .login h2{
+    font-weight: 100;
+    font-size: 1.2em;
+    color: rgb(68, 68, 68);
+}
+
+nav .login button, main .join{
+    background-image: linear-gradient(45deg, #e6634c 1%, #DF52A6 60%, #D14CC6);
+    color: white;
+
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.055);
+
+    font-size: 1rem;
+    padding: 15px 40px;
+}
+nav .login button:hover, .text button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #bb503d 1%, #af4283 60%, #ac40a3);
+}
+
+/* NAVBAR */
+
+
+/* INTRO */
+
+main{
+    display: grid;
+    grid-template-columns: 50% 40%;
+    justify-content: center;
+    align-items: center;
+}
+main .text{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    width: 40vw;
+    height: calc(70vh - 100px);
+    margin: auto;
+    color: rgb(36, 36, 36);
+    cursor: default;
+}
+.text h1{
+    animation: subirtexto1 2.5s forwards;
+    font-size: 5rem;
+}
+.text p{
+    animation: subirtexto2 2.5s forwards;
+    cursor: auto;
+}
+.text button{
+    width: 200px;
+    animation: subirbtn 2.5s forwards;
+}
+main .girl {
+    height: calc(100vh - 100px);
+}
+main .girl img{
+    height: calc(100vh - 100px);
+    animation: subirimg 2.5s forwards;
+}
+
+/* INTRO */
