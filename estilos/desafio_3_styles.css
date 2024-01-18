@@ -157,7 +157,7 @@
     box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.138);
 }
 .card:hover .card-top{
-    background: url('../imagens/desafio3_img.png') no-repeat;
+    background: url('../imagens/desafio3/desafio3_img.png') no-repeat;
     background-size: contain;
     background-position: bottom center;
 
@@ -166,12 +166,12 @@
     transition-timing-function: ease;
 }
 .card:hover.card2 .card-top{
-    background: url('../imagens/desafio3_img2.png') no-repeat;
+    background: url('../imagens/desafio3/desafio3_img2.png') no-repeat;
     background-size: cover  ;
     background-color: #0044ff;
 }
 .card:hover.card3 .card-top{
-    background: url('../imagens/desafio3_img3.png') no-repeat;
+    background: url('../imagens/desafio3/desafio3_img3.png') no-repeat;
     background-size: cover;
     background-position: bottom bottom;
     background-color: #cc1313;
